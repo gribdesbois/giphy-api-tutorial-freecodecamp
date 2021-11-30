@@ -1,9 +1,16 @@
 import React from 'react'
 
-function TextList() {
+function TextList({url, gifs}) {
+  const items = gifs.map((itemData) => {
+    return <Item url={itemData.url} />
+  })
+  return <div className='text-container'>{items}</div>
+}
+
+function Item({url}) {
   return (
-    <div>
-      
+    <div className="gif-item">
+      <img src={url} />
     </div>
   )
 }

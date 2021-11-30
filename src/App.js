@@ -45,6 +45,8 @@ function App() {
       <h3>Type text into the form and hit submit</h3>
       <input className='input-field' value={text} onChange={handleInput} type='text' />
       <button className='submit-btn' onClick={handleSubmit}>Submit</button>
+      <Error isError={err} text='need length longer than 0 for input' />
+      {results && <TextList gifs={results} />}
     </div>
   )
 }

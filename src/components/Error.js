@@ -1,10 +1,14 @@
 import React from 'react'
 
-function Error() {
+function Error({isError, text}) {
+  if (!isError) {
+    return null
+  }
+
   return (
-    <div>
-      
-    </div>
+    <p className='error'>
+      {text}
+    </p>
   )
 }
 
